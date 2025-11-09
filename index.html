@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }} | {{ site.description }}</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+    <div class="profile">
+      <!-- 🔹 PLADSHOLDER TIL BILLEDE -->
+      <img src="assets/profile.jpg" alt="Profile picture" class="profile-img">
+    </div>
+    <h1>{{ site.title }}</h1>
+    <h2>{{ site.description }}</h2>
+
+    <div class="socials">
+      <!-- 🔹 Tilføj dine links her -->
+      <a href="#" title="Email">✉️</a>
+      <a href="#" title="GitHub">💻</a>
+      <a href="#" title="LinkedIn">🔗</a>
+      <a href="#" title="YouTube">▶️</a>
+      <a href="#" title="Instagram">📸</a>
+    </div>
+
+    <div class="buttons">
+      {% for section in site.sections %}
+      <a href="#{{ section.id }}" class="nav-btn">{{ section.name }}</a>
+      {% endfor %}
+    </div>
+  </header>
+
+  <main>
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Showcase some of your coolest games or programming experiments here.</p>
+      <!-- Du kan tilføje projekt-knapper eller billeder -->
+    </section>
+
+    <section id="career">
+      <h2>Career</h2>
+      <p>Write a bit about your experience, education, or the path you’re taking as a game developer.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Unity / Unreal Engine</li>
+        <li>C# / C++</li>
+        <li>Game Design</li>
+        <li>Shader Programming</li>
+      </ul>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <p>Talk about topics you’re exploring or learning — e.g. AI in games, physics systems, or procedural generation.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© {{ site.title }} — Powered by GitHub Pages</p>
+  </footer>
+</body>
+</html>
