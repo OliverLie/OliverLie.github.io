@@ -1,3 +1,15 @@
-theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
+title: "Oliver Lie"
+description: "Game Developer"
+theme: null
+markdown: kramdown
+permalink: pretty
+
+sections:
+  - id: projects
+    name: Projects
+  - id: career
+    name: Career
+  - id: skills
+    name: Skills
+  - id: research
+    name: Research
