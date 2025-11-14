@@ -103,23 +103,29 @@ ul li {
 
 ul li a {
     align-self:center;
+
     --fill-color: #ffffff;
     --fill-color_outer: #ffffff;
-    width: max-content;
+
     display: block;
+    width: max-content;
     font-family: "cascadia", "monospace";
     font-size: 3rem;
     font-weight: 100;
     text-decoration: none;
     text-transform: uppercase;
+
     -webkit-text-stroke: 2px var(--fill-color_outer);
+
     background: linear-gradient(90deg, var(--fill-color) 100%, var(--fill-color) 100%);
     background-size: 0;
     background-position: left;
     background-repeat: no-repeat;
+
     color: transparent;
     -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
+
     transition: 0.35s linear;
 }
 
@@ -167,18 +173,18 @@ a letter {
 } 
 
 letter { 
-  display:inline-block; 
-  white-space:pre; 
-  background:none; 
-  transition:.4s; 
+    display:inline-block; 
+    white-space:pre; 
+    background:none; 
+    transition:.4s;
 }
 
 letter.initial { 
-  opacity:0; 
-  text-shadow:0 0 9px; 
-  color:#FFF; 
-  transform:scale(8); 
-  transform-origin:150% 50%; 
+    opacity:0; 
+    text-shadow:0 0 9px; 
+    color:#FFF; 
+    transform:scale(8); 
+    transform-origin:150% 50%; 
 }
 
 /* -------------------------------------------------- */
@@ -244,12 +250,12 @@ letter.initial {
     text-shadow: 1px 1px 2px #427388;
 }
 
-.kd-button  {
-	position: relative;
+.kd-button {
+    position: relative;
     display: inline-block;
     margin-left: 1rem;
-	overflow: hidden;
-	vertical-align: middle;
+    overflow: hidden;
+    vertical-align: middle;
 }
 
 /* -------------------------------------------------- */
@@ -257,53 +263,53 @@ letter.initial {
 /* -------------------------------------------------- */
 
 #pt {
-  color: white;
-  font-family: 'cascadia', 'monospace';
-  font-size: 1.8rem; 
-  letter-spacing: -.05rem;
-  text-align: center;
+    color: white;
+    font-family: 'cascadia', 'monospace';
+    font-size: 1.8rem; 
+    letter-spacing: -.05rem;
+    text-align: center;
 }
 
 .proj-button {
-  border: 2px solid white;
-  display: inline-block;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: transform .3s;
-  max-width:10vh;
-  min-width:10vh;
-  min-height:10vh;
-  max-height:10vh;
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform .3s;
+    max-width:10vh;
+    min-width:10vh;
+    min-height:10vh;
+    max-height:10vh;
 }
 
 .proj-button:hover {
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 
-              0 0 20px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .proj-button-active {
-  border: 2px solid yellow;
-  display: inline-block;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: transform .3s;
-  max-width:10vh;
-  min-width:10vh;
-  min-height:10vh;
-  max-height:10vh;
+    border: 2px solid yellow;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform .3s;
+    max-width:10vh;
+    min-width:10vh;
+    min-height:10vh;
+    max-height:10vh;
 }
 
 .proj-button-active:hover {
-  box-shadow: inset 0 0 20px rgba(221,189,11,0.5), 
-              0 0 20px rgba(236,221,7,0.5);
-  text-shadow: 1px 1px 2px yellow;
+    box-shadow: inset 0 0 20px rgba(221,189,11,0.5), 
+                0 0 20px rgba(236,221,7,0.5);
+    text-shadow: 1px 1px 2px yellow;
 }
 
 .proj-button-img {
-	overflow: hidden;
-	transition: transform .5s;
-	max-width: 100%;
-	width: auto;
+    overflow: hidden;
+    transition: transform .5s;
+    max-width: 100%;
+    width: auto;
     height: auto;
 }
 
@@ -312,43 +318,43 @@ letter.initial {
 /* -------------------------------------------------- */
 
 #skill-chart-title {
-  color: white;
-  text-align: center; 
-  font-family: 'VT323', monospace;
-  font-size: 3.5rem; 
-  letter-spacing: -.05rem;
+    color: white;
+    text-align: center; 
+    font-family: 'VT323', monospace;
+    font-size: 3.5rem; 
+    letter-spacing: -.05rem;
 }
 
 .chart_parent {
-  border: 2px dotted white;
+    border: 2px dotted white;
 }
 
 .chart .metric {
-  background: rgba(255,255,255,0);
-  color: white;
-  text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
-  border-radius: 3px;
-  padding: 10px;
-  text-align: left;
-  box-shadow: inset 0 0 8px rgba(255,255,255,0.6);
-  font-family: 'cascadia', 'monospace';
+    background: rgba(255,255,255,0);
+    color: white;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    border-radius: 3px;
+    padding: 10px;
+    text-align: left;
+    box-shadow: inset 0 0 8px rgba(255,255,255,0.6);
+    font-family: 'cascadia', 'monospace';
 }
 
 .chart .metric .metric-value {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .chart-horizontal {
-  width: 100%;
+    width: 100%;
 }
 
 .chart-horizontal .metric {
-  margin-bottom: 3px;
-  min-width: 100px;
-  padding: 6px 15px;
+    margin-bottom: 3px;
+    min-width: 100px;
+    padding: 6px 15px;
 }
 
 .chart-horizontal .metric .metric-value {
-  float: right;
-  font-weight: bold;
+    float: right;
+    font-weight: bold;
 }
