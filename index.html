@@ -1,78 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="programmer, coding, console, cv, java, haskell, OpenGL, c, c++, games developer, software developer, english, israeli, hebrew" />
-    <meta name="description" content="Games and software developer interested in c++ engine development.">
-    <title>Oliver Lie</title>
+    <head>
+        <!-- Metadata -->
+        <meta charset="utf-8">
+        
+        <!-- Mobile Specific Metas -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="keywords" content="programmer, coding, console, cv, java, haskell, OpenGL, c, c++, games developer, software developer, english, israeli, hebrew" />
+        <meta name="description" content="Games and software developer interested in c++ engine development." />
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="styles/skeleton.css">
-    <link rel="stylesheet" type="text/css" href="styles/landing.css">
-    <link rel="stylesheet" type="text/css" href="styles/career.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Oliver Lie</title>
 
-    <!-- Project CSS -->
-    <link rel="stylesheet" type="text/css" href="./styles/project_styles/mirage.css"/>
-    <link rel="stylesheet" type="text/css" href="./styles/project_styles/exalted.css"/>
-    <link rel="stylesheet" type="text/css" href="./styles/project_styles/15_puzzle.css"/>
-    <link rel="stylesheet" type="text/css" href="./styles/project_styles/game_tech.css"/>
-    <link rel="stylesheet" type="text/css" href="./styles/project_styles/vpa.css"/>
 
-    <link rel="icon" type="image/png" href="./data/images/icon_trans.png">
+        <!-- External file links for this html page  -->
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="styles/skeleton.css">
+        <link rel="stylesheet" type="text/css" href="styles/landing.css">
+        <link rel="stylesheet" type="text/css" href="styles/career.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="scripts/quick_links.js"></script>
-</head>
+        <!-- Project related css files --> 
+        <link rel="stylesheet" type="text/css" href="./styles/project_styles/mirage.css"/>
+        <link rel="stylesheet" type="text/css" href="./styles/project_styles/exalted.css"/>
+        <link rel="stylesheet" type="text/css" href="./styles/project_styles/15_puzzle.css"/>
+        <link rel="stylesheet" type="text/css" href="./styles/project_styles/game_tech.css"/>
+        <link rel="stylesheet" type="text/css" href="./styles/project_styles/vpa.css"/>
 
-<body id="top">
+        <!-- Icon -->
+        <link rel="icon" type="image/png" href="./data/images/icon_trans.png">
 
-    <!-- ⭐ Starfield background -->
-    <canvas id="starfield"></canvas>
+        <!-- Scripts -->
+        <script src="scripts/quick_links.js"></script>
 
-    <div class="container" style="margin-top: 1%" align="center">
-        <div id="title">Oliver Lie</div>
-        <img class="landing_logo" src="./data/images/portrait.png" alt="Portrait">
+        <!-- Add google analytics data -->
 
-        <div id="quick_links">
-            <a href="./data/cv/Oliver_Lie_CV.pdf" target="_blank"><i class="fa fa-file-text"></i></a>
-            <a href="mailto:oliverlieee@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-            <a href="https://github.com/OliverLie" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/oliver-lie-a8433a1bb/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </div>
+    </head>
 
-        <hr>
-
-        <div id="about_me">
-            Hi there and thanks for stopping by! My name is Oliver, i'm a passionate programmer who feels enjoyment and fulfillment from the journey of creating experiences.
-        </div>
-
-        <hr>
-
-        <section class="buttons">
-            <div class="button_container">
-                <div id="projects-Button" class="btn btn-5 kd-button">Projects</div>
-                <div id="career-Button" class="btn btn-5 kd-button">Career</div>
-                <div id="skills-Button" class="btn btn-5 kd-button">Skills</div>
-                <div id="research-Button" class="btn btn-5 kd-button">Research</div>
+    <!-- Add a custom container class implementation here.... -->
+    <body id="top">  
+        <div class="container" style="margin-top: 1%" align="center">   
+            <div id="title">Oliver Lie</div>            
+            <img class="landing_logo" src="./data/images/portrait.png" alt="Portrait">
+            <div id="quick_links">
+                <!-- <p id ="tooltip">Quick Links</p> -->
+                <a href="./data/cv/Oliver_Lie_CV.pdf" target="_blank"><i class="fa fa-file-text"></i></a>
+                <a href="mailto:oliverlieee@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                <a href="https://github.com/OliverLie" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/oliver-lie-a8433a1bb/" target="_blank"><i class="fa fa-linkedin"></i></a>
             </div>
-        </section>
-    </div>
+            <hr>
+            <div id="about_me">Hi there and thanks for stopping by! My name is Oliver, i'm a passionate programmer who feels enjoyment and fulfillment from the journey of creating experiences.</div>
+            <hr>
 
-    <!-- Text animation -->
-    <script src="scripts/text_animation.js"></script>
+            <section class="buttons">
+                <div class="button_container">
+                    <div id="projects-Button" class="btn btn-5 kd-button" onClick="document.getElementById('project_data_area').style.opacity = 0;">Projects</div> 
+                    <div id="career-Button" class="btn btn-5 kd-button" onClick="document.getElementById('project_data_area').style.opacity = 0;">Career</div> 
+                    <div id="skills-Button" class="btn btn-5 kd-button" onClick="document.getElementById('project_data_area').style.opacity = 0;">Skills</div> 
+                    <div id="research-Button" class="btn btn-5 kd-button" onClick="document.getElementById('project_data_area').style.opacity = 0;">Research</div> 
+                </div>
+            </section>
+        </div>
 
-    <!-- Bottom containers belong INSIDE body (this was your bug!) -->
+        <!-- Scripts used in top body -->
+        <script src="scripts/text_animation.js"></script>
+    </body>
+
     <div id="bottom">
+        <!-- Data_Labels -->
         <div id="data_selection_area" class="container kd-selection-content" style="opacity: 0;"></div>
         <div id="project_data_area" class="container kd-selection-content" style="opacity: 0;"></div>
-
         <script src="scripts/button_nav_selection.js"></script>
         <script src="scripts/button_nav_proj.js"></script>
         <script src="scripts/button_nav_career.js"></script>
 
-        <!-- ⭐ Starfield script -->
-        <script src="javascript/starfield.js"></script>
     </div>
-
-</body>
 </html>
