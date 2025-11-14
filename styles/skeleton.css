@@ -418,13 +418,18 @@ hr {
 /* CUSTOM CURSOR FIX FOR YOUR REAL BUTTONS (.kd-button) */
 /* ------------------------------------------------ */
 
+/* Custom hover cursor for ALL button types used on the site */
 .kd-button:hover,
-.kd-button *:hover {
-    cursor: url("MouseHold.cur"), pointer !important;
-}
-
-/* Custom hover cursor for hyperlinks */
-a:hover,
-a *:hover {
+.kd-button *:hover,
+.btn:hover,
+.btn *:hover,
+.btn-5:hover,
+.btn-5 *:hover,
+.btn-career-5:hover,
+.btn-career-5 *:hover,
+.button_container div:hover,
+.button_container div *:hover,
+.button_career_container div:hover,
+.button_career_container div *:hover {
     cursor: url("MouseHold.cur"), pointer !important;
 }
