@@ -433,3 +433,9 @@ hr {
 .button_career_container div *:hover {
     cursor: url("MouseHold.cur"), pointer !important;
 }
+
+/* Hyperlinks */
+a:hover,
+a *:hover {
+    cursor: url("MouseHold.cur"), pointer !important;
+}
