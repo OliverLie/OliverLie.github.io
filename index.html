@@ -11,16 +11,13 @@
 
         <title>Oliver Lie</title>
 
-
-        <!-- External file links for this html page  -->
-        
-        <!-- CSS -->
+        <!-- External CSS -->
         <link rel="stylesheet" type="text/css" href="styles/skeleton.css">
         <link rel="stylesheet" type="text/css" href="styles/landing.css">
         <link rel="stylesheet" type="text/css" href="styles/career.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <!-- Project related css files --> 
+        <!-- Project CSS files --> 
         <link rel="stylesheet" type="text/css" href="./styles/project_styles/mirage.css"/>
         <link rel="stylesheet" type="text/css" href="./styles/project_styles/exalted.css"/>
         <link rel="stylesheet" type="text/css" href="./styles/project_styles/15_puzzle.css"/>
@@ -32,25 +29,30 @@
 
         <!-- Scripts -->
         <script src="scripts/quick_links.js"></script>
-
-        <!-- Add google analytics data -->
-
     </head>
 
-    <!-- Add a custom container class implementation here.... -->
-    <body id="top">  
+    <body id="top">
+
+        <!-- ⭐ NEW: Pixel Starfield Background Canvas -->
+        <canvas id="starfield"></canvas>
+
         <div class="container" style="margin-top: 1%" align="center">   
             <div id="title">Oliver Lie</div>            
             <img class="landing_logo" src="./data/images/portrait.png" alt="Portrait">
+
             <div id="quick_links">
-                <!-- <p id ="tooltip">Quick Links</p> -->
                 <a href="./data/cv/Oliver_Lie_CV.pdf" target="_blank"><i class="fa fa-file-text"></i></a>
                 <a href="mailto:oliverlieee@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
                 <a href="https://github.com/OliverLie" target="_blank"><i class="fa fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/oliver-lie-a8433a1bb/" target="_blank"><i class="fa fa-linkedin"></i></a>
             </div>
+
             <hr>
-            <div id="about_me">Hi there and thanks for stopping by! My name is Oliver, i'm a passionate programmer who feels enjoyment and fulfillment from the journey of creating experiences.</div>
+
+            <div id="about_me">
+                Hi there and thanks for stopping by! My name is Oliver, i'm a passionate programmer who feels enjoyment and fulfillment from the journey of creating experiences.
+            </div>
+
             <hr>
 
             <section class="buttons">
@@ -63,17 +65,19 @@
             </section>
         </div>
 
-        <!-- Scripts used in top body -->
+        <!-- Text animation -->
         <script src="scripts/text_animation.js"></script>
+
+        <div id="bottom">
+            <div id="data_selection_area" class="container kd-selection-content" style="opacity: 0;"></div>
+            <div id="project_data_area" class="container kd-selection-content" style="opacity: 0;"></div>
+
+            <script src="scripts/button_nav_selection.js"></script>
+            <script src="scripts/button_nav_proj.js"></script>
+            <script src="scripts/button_nav_career.js"></script>
+
+            <!-- ⭐ NEW: Starfield script -->
+            <script src="javascript/starfield.js"></script>
+        </div>
     </body>
-
-    <div id="bottom">
-        <!-- Data_Labels -->
-        <div id="data_selection_area" class="container kd-selection-content" style="opacity: 0;"></div>
-        <div id="project_data_area" class="container kd-selection-content" style="opacity: 0;"></div>
-        <script src="scripts/button_nav_selection.js"></script>
-        <script src="scripts/button_nav_proj.js"></script>
-        <script src="scripts/button_nav_career.js"></script>
-
-    </div>
 </html>
