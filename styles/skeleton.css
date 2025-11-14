@@ -415,13 +415,10 @@ hr {
 
 
 /* ------------------------------------------------ */
-/* FORCE CUSTOM CURSOR ON HOVER — ALWAYS WORKS */
+/* CUSTOM CURSOR FIX FOR YOUR REAL BUTTONS (.kd-button) */
 /* ------------------------------------------------ */
 
-button:hover,
-.button:hover,
-a.button:hover,
-a.button *:hover,
-button *:hover {
+.kd-button:hover,
+.kd-button *:hover {
     cursor: url("MouseHold.cur"), pointer !important;
 }
