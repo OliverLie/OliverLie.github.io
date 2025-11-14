@@ -422,3 +422,9 @@ hr {
 .kd-button *:hover {
     cursor: url("MouseHold.cur"), pointer !important;
 }
+
+/* Custom hover cursor for hyperlinks */
+a:hover,
+a *:hover {
+    cursor: url("MouseHold.cur"), pointer !important;
+}
