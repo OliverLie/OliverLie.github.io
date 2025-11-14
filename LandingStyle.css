@@ -1,20 +1,46 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
+/* ------------------------------------------------ */
+/*                 ANIMATED GRADIENT                */
+/* ------------------------------------------------ */
+
 body {
-    background-color: #1d2e1f;
-    /* background-image: linear-gradient(
-        rgba(0, 0, 255, 0.2), #1c2619 102% 
-    ); */
-    background-image: repeating-linear-gradient(rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.2),#1c2619  102% ); 
+    background: linear-gradient(230deg, #0d1a23, #112533, #0b1a2b, #112533, #0d1a23);
+    background-size: 400% 400%;
+    animation: gradientShift 35s ease infinite;
 
     height: 100vh;
+    margin: 0px;
 
     display: block;
-    margin: 0px;
     font-family: 'Source Code Pro', monospace;
     font-size: 15pt;
     text-shadow: 0 0 3px;
 }
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ------------------------------------------------ */
+/*              PIXEL STARFIELD CANVAS              */
+/* ------------------------------------------------ */
+
+#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* ------------------------------------------------ */
+/*                 CRT / TERMINAL FX                */
+/* ------------------------------------------------ */
 
 body::after {
     content: "";
@@ -24,10 +50,6 @@ body::after {
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    /* background-image: radial-gradient(
-        rgba(0, 0, 0, 0), rgba(1, 1, 1, 0.4) 93%
-    ); */
-
 }
 
 div#crtEffect {
@@ -37,12 +59,21 @@ div#crtEffect {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: repeating-linear-gradient(0deg, rgba(1, 1, 1, 0.02), rgba(1, 1, 1, 0.25), rgba(1, 1, 1, 0.02) 1%);
+    background-image: repeating-linear-gradient(
+        0deg, 
+        rgba(1, 1, 1, 0.02), 
+        rgba(1, 1, 1, 0.25), 
+        rgba(1, 1, 1, 0.02) 1%
+    );
     pointer-events: none;
     z-index: 10;
 }
 
-p , .userInput, .char, span, li{
+/* ------------------------------------------------ */
+/*               TERMINAL COLORS & UI               */
+/* ------------------------------------------------ */
+
+p, .userInput, .char, span, li {
     color: #fffb00;
     white-space: pre;
 }
@@ -50,9 +81,7 @@ p , .userInput, .char, span, li{
 u {
     -webkit-text-decoration-color: white;
     text-decoration-color: white;
-
     animation: blink-animation 1s steps(2, start) infinite;
-    -webkit-animation: blink-animation 1s steps(2, start) infinite;
 }
 
 span.standout {
@@ -65,15 +94,15 @@ a {
     color: #88ff00;
 }
 
-a:hover , .sugg:hover {
+a:hover, .sugg:hover {
     background-color: #404040;
     cursor: pointer;
 }
 
 #trace {
     list-style: none;
-    margin: 0px;
-    padding-left: 0px;
+    margin: 0;
+    padding-left: 0;
 }
 
 #suggestion {
@@ -83,7 +112,6 @@ a:hover , .sugg:hover {
 li:before {
     display: block;
     float: left;
-
 }
 
 li.cmd:before {
@@ -94,12 +122,12 @@ li.usr:before {
     content: "[User]$";
 }
 
-li.usr:before , #char {
+li.usr:before, #char {
     color: rgba(0, 255, 0, 0.993);
     font-weight: bold;
 }
 
-li.usr , #userInput {
+li.usr, #userInput {
     color: #ffffff;
 }
 
@@ -107,13 +135,16 @@ img {
     height: 0.7em;
 }
 
-/*Thumbnails*/
-.thumbnail{
+/* ------------------------------------------------ */
+/*                   THUMBNAILS                     */
+/* ------------------------------------------------ */
+
+.thumbnail {
     position: relative;
     z-index: 0;
 }
 
-.thumbnail span{
+.thumbnail span {
     position: absolute;
     background-color: black;
     padding: 5px;
@@ -123,46 +154,37 @@ img {
     color: black;
 
     width: 500px;
-    height: 100%;
+    height: auto;
 
     max-width: 500px;
     max-height: 500px;
 
-    height:auto;
     z-index: 15;
-    text-decoration: none;
 }
 
-.thumbnail span img{
+.thumbnail span img {
     border-width: 0;
-
     width: 100%;
     height: auto;
-
     padding: 2px;
 }
 
-.thumbnail:hover span{
+.thumbnail:hover span {
     visibility: visible;
     top: 0;
     left: 100px;
 }
 
-/*Input Blink*/
+/* ------------------------------------------------ */
+/*                 TERMINAL BLINK                   */
+/* ------------------------------------------------ */
+
 @keyframes blink-animation {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
 
 @-webkit-keyframes blink-animation {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
