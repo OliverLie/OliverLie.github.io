@@ -194,21 +194,6 @@ input[type="button"]:focus {
     outline: 0;
 }
 
-/* CUSTOM HOVER CURSOR FOR BUTTONS */
-.button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover {
-    cursor: url("MouseHold.cur"), pointer;
-}
-
-/* IN CASE BUTTON HAS CHILD ELEMENTS */
-button *:hover,
-.button *:hover {
-    cursor: url("MouseHold.cur"), pointer;
-}
-
 
 /* PRIMARY BUTTONS */
 .button.button-primary,
@@ -427,3 +412,16 @@ hr {
 @media (min-width: 750px) {}
 @media (min-width: 1000px) {}
 @media (min-width: 1200px) {}
+
+
+/* ------------------------------------------------ */
+/* FORCE CUSTOM CURSOR ON HOVER — ALWAYS WORKS */
+/* ------------------------------------------------ */
+
+button:hover,
+.button:hover,
+a.button:hover,
+a.button *:hover,
+button *:hover {
+    cursor: url("MouseHold.cur"), pointer !important;
+}
