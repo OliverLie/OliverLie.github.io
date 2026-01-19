@@ -66,7 +66,7 @@
 }
 
 /* === VIDEO === */
-#guns_below_youtube {
+#PirateWars_Youtube {
     text-align: center;
     margin-top: 20px;
 }
@@ -83,7 +83,7 @@
         font-size: 1.4rem;
     }
 
-    #guns_below_youtube iframe {
+    #PirateWars_Youtube iframe {
         width: 100%;
         height: auto;
     }
