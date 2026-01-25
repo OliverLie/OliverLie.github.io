@@ -5,7 +5,7 @@
 const ProjectNames = 
 [
     "GunsBelow",
-    "Steam+Fusion
+    "Steam+Fusion"
 ]
 
 let ProjectText = [];
