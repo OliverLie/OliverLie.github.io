@@ -64,13 +64,8 @@ h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
 {
     margin: 10px auto;
     height: 25vh;
-    width: 25vh;
-    object-fit: cover;
-    border-radius: 20px;
-    
-    transform: scale(1.3);
-    object-position: center 40%; /* Flyt fokus lidt op (prøv forskellige %) */
-    
+
+    /* DEBUG VARIABLES */
     border: 0px solid rgb(255, 102, 0);
 }
 
