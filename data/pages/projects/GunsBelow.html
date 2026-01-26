@@ -23,11 +23,13 @@
 <div id="guns_below_body">
     <div class="guns_below_text">
         <br>
-        Pirate Wars is a multiplayer FPS where players battle on moving pirate ships.
-        The game uses server-authoritative networking to ensure fair gameplay,
-        with the host validating all damage, scoring, and win conditions.
+        PirateWars is a multiplayer FPS I developed to explore the technical challenges of networked physics on moving platforms. The core concept - battling on dynamic pirate ships - created interesting problems: how do you keep players synchronized when the ground beneath them is constantly moving and rotating?
         <br><br>
-        Developed in Unity using C#, Photon Fusion 2, Photon Advanced KCC and Photon Finite State Machine.
+        I implemented Photon Fusion 2's server-authoritative networking with Host-Client architecture, where the host validates all damage, scoring, and win conditions to prevent cheating. The most challenging aspect was handling player movement on moving ships - players needed to inherit ship velocity whilst maintaining responsive FPS controls. I solved this by parenting the Kinematic Character Controller to the ship transform, which required careful handling of network synchronization and edge cases like players jumping between ships.
+        <br><br>
+        The game uses a Finite State Machine to manage match flow, from lobby to gameplay to results, with all state transitions validated server-side. I also implemented a comprehensive score synchronization system using Photon's NetworkDictionary to track player kills, deaths, and objective captures in real-time.
+        <br><br>
+        Developed in Unity using C#, Photon Fusion 2, Photon Advanced KCC, and custom FSM implementation.
     </div>
 </div>
 <!-- ==== YOUTUBE VIDEO ==== -->
