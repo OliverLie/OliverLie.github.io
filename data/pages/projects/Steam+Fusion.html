@@ -24,21 +24,15 @@
 <div id="guns_below_body">
     <div class="guns_below_text">
         <br>
-        This framework was developed to solve a common multiplayer development challenge: combining Steam's friend system and social features with Photon Fusion 2's powerful networking. The goal was to allow players to create lobbies through Steam, invite friends via Steam's overlay, and have everything seamlessly connect to Photon's server infrastructure.
+        This framework bridges Steam's social features with Photon Fusion 2's networking, allowing players to create lobbies through Steam, invite friends via the overlay, and seamlessly connect to Photon's servers.
         <br><br>
-        The core challenge came from the fundamentally different architectures of the two systems. Steam lobbies are primarily metadata containers - they don't handle the actual game networking. Photon Fusion, on the other hand, manages all gameplay synchronization but has no native Steam integration. The solution required building a bridge that would synchronize state between both systems whilst avoiding conflicts during scene transitions and reconnections.
+        The core challenge was synchronizing two fundamentally different systems. Steam lobbies are metadata containers whilst Photon handles actual gameplay networking. I implemented an event-driven architecture where Steam callbacks trigger Photon session creation, with the session name stored as Steam lobby metadata. When a friend accepts an invite, their client retrieves the Photon session name and automatically joins the correct room.
         <br><br>
-        I implemented an event-driven architecture where Steam callbacks trigger Photon session creation, with the Photon session name stored as Steam lobby metadata. This approach creates a "session handshake" - when a friend accepts a Steam invite, their client retrieves the Photon session name from the Steam lobby data and automatically joins the correct Photon room. The tricky part was handling edge cases: what happens when someone leaves mid-game? What if the host's Photon session fails but the Steam lobby persists? These scenarios required careful state management and cleanup logic across both systems.
+        The section I'm most proud of is the avatar loading system. Steam provides profile images asynchronously, so I built a caching system with event callbacks that allows UI elements to subscribe to avatar load events. When an avatar finishes downloading, all relevant UI updates automatically without manual polling.
         <br><br>
-        One aspect I'm particularly proud of is the avatar loading system. Steam provides profile images asynchronously - you request them, but they might not be ready immediately. I built a caching system with event callbacks that allows UI elements to subscribe to avatar load events. When an avatar finishes downloading, all relevant UI automatically updates without manual polling. This pattern keeps the main thread responsive whilst handling multiple simultaneous avatar requests.
+        Testing required running multiple game instances simultaneously to verify invite flows and lobby synchronization across clients. The DontDestroyOnLoad persistence pattern created interesting challenges - UI elements survive scene transitions but references break, requiring dynamic re-wiring after each scene load.
         <br><br>
-        The DontDestroyOnLoad persistence pattern presented interesting challenges. UI elements and managers needed to survive scene transitions, but references to scene objects would break. I solved this by implementing dynamic reference resolution - the system searches for and re-wires connections after each scene load. This allows the lobby UI to persist across gameplay whilst maintaining proper connectivity to scene-specific elements.
-        <br><br>
-        Testing proved crucial. With two separate systems (Steam and Photon), debugging required running multiple game instances simultaneously to verify invite flows, lobby synchronization, and avatar loading across different clients. I spent considerable time ensuring the EventSystem management was robust - multiple EventSystems would cause input to fail silently, which was particularly frustrating to diagnose.
-        <br><br>
-        Looking forward, I'd like to explore implementing Steam's Rich Presence API to display detailed game state information on friends' profiles, and potentially add support for Steam's networking transport layer as an alternative to Photon's cloud infrastructure for LAN-based sessions. The framework is designed to be modular, so these additions should integrate cleanly with the existing architecture.
-        <br><br>
-        The complete implementation includes custom managers for Steam initialization, lobby management, and Photon session bridging, alongside UI systems for player lists with real-time avatar updates. All source code and documentation can be found in the GitHub repository.
+        Looking forward, I'd like to implement Steam's Rich Presence API and potentially add support for Steam's networking transport as a LAN alternative. The complete implementation includes managers for Steam initialization, lobby management, and Photon bridging, alongside UI systems for real-time player lists with avatar updates.
     </div>
 </div>
 <!-- ==== YOUTUBE VIDEO ==== -->
